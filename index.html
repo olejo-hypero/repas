@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="Альфа, сервис, туймазы, ремонт, пк">
+      <title>Document</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/fonts.css">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/wicart.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <script src="https://use.fontawesome.com/321b61bad5.js"></script>
+      <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+      <script src="js/SmoothScroll.js"></script>
+   </head>
+   <body>
+    <script>
+      $(document).ready(function(){
+        $('#login-trigger').click(function(){
+          $(this).next('#login-content').slideToggle();
+          $(this).toggleClass('active');          
+          
+          if ($(this).hasClass('active')) $(this).find('span').html('<i class="fa fa-user" aria-hidden="true"></i>')
+            else $(this).find('span').html('<i class="fa fa-user" aria-hidden="true"></i>')
+          })
+      });
+  </script> 
+
+<script>
+  jQuery(function($) {
+          $(window).scroll(function(){
+              if($(this).scrollTop()>80){
+                  $('#nav-bottom-nav').addClass('fixed');
+              }
+              else if ($(this).scrollTop()<140){
+                  $('#nav-bottom-nav').removeClass('fixed');
+              }
+          });
+      });
+</script>
+
+<script type="text/javascript">
+  ymaps.ready(init);
+function init() {
+var geolocation = ymaps.geolocation;
+if (geolocation) {
+    $("#user-city").html(geolocation.country + ', ' + geolocation.region + ', ' + geolocation.city);
+} else {
+    console.log('Не удалось установить местоположение');
+}
+}
+</script>
+
+      <div class="wrapper">
+         <div id="header">
+            <div class="top-line">
+               <div class="content-wrapper">
+                  <div class="region-area">
+                    <span class="region-area-image"></span>
+                    <a href="#" class="go" id="user-city"></a></div>
+                  <div class="links-line">
+                     <span class="sign-icon"></span><a href="#" id="signin">Вход</a> <span>/</span> <a href="registration.php">Регистрация</a>
+                  </div>
+               </div>
+            </div>
+           <div class="nav-menu">
+               <div class="content-wrapper">
+                  <a href="/" id="logo"></a>
+                  <div class="links-menu">
+                     <a href="remont.html">Ремонт техники</a>
+                     <a href="sell.html">Продажа комплектующих</a>
+                     <a href="#">Заказ оборудования</a>
+                     <a href="contacts.html">Контакты</a>
+                  </div>
+               </div>
+            </div>
+            <div id="nav-bottom-nav" class="nav-bottom">
+                <div class="content-wrapper">
+                    <ul class="top-menu">
+    <li><a href="#" class="dropdown">Услуги ремонта</a>
+      <ul class="submenu">
+        <img src="images/pc-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Компьютеры</a>
+          <div class="foot-line" style="background: #cc0220;"></div>
+          <ul>
+            <li><a href="#">Диагностика</a></li>
+            <li><a href="#">Настройка</a></li>
+            <li><a href="">Ремонт</a></li>
+            <li><a href="">Установка</a></li>
+          </ul>
+        </li>
+       <img src="images/laptop-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Ноутбуки</a>
+          <div class="foot-line" style="background: #000;"></div>
+          <ul>
+            <li><a href="">Диагностика</a></li>
+            <li><a href="">Настройка</a></li>
+            <li><a href="">Ремонт</a></li>
+            <li><a href="">Установка</a></li>
+            
+          </ul>
+        </li>
+       <img src="images/planshet-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Планшеты</a>
+          <div class="foot-line" style="background: #8c04e0;"></div>
+          <ul>
+            <li><a href="">Диагностика</a></li>
+            <li><a href="">Прошивка</a></li>
+            <li><a href="">Ремонт</a></li>
+            
+          </ul>
+        </li>
+       <img src="images/monitor-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Мониторы</a>
+          <div class="foot-line"></div>
+          <ul>
+            <li><a href="">Диагностика</a></li>
+            <li><a href="">Ремонт</a></li>
+          </ul>
+        </li>
+        <img src="images/periferiya-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Периферия</a>
+          <div class="foot-line" style="background: #919191;"></div>
+          <ul>
+            <li><a href="">Диагностика</a></li>
+            <li><a href="">Настройка</a></li>
+          </ul>
+        </li>
+        <img src="images/sist-list.png" alt="#">
+        <li><a href="#" class="title__submenu">Заказ</a>
+          <div class="foot-line" style="background: #009b50;"></div>
+          <ul>
+            <li><a href="">Материнские платы</a></li>
+            <li><a href="">Сетевые карты</a></li>
+            <li><a href="">Видеокарты</a></li>
+            <li><a href="">Чипы</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+                    <form action="phprusearch/" method="post" class="search">
+                        <input type="search" name="query" placeholder="ПОИСК УСЛУГИ" class="input" />
+                        <input type="submit" name="#" value="" class="submit" />
+                      </form>
+                    <div class="korzina">
+                      <ul>
+                        <li class="korzina-wrap">
+                          <a id="korzina-trigger" href="cart.html">
+                      <span class="icon-korz"></span>
+                       Корзина
+                     </a>
+                    </li>
+                    </ul>
+                    </div>
+                    <div class="kabinet">
+                    <ul>
+                      <li class="kabinet-wrap">
+                        <div id="login-trigger">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                          Кабинет
+                        </div>
+                        <div id="login-content">
+                          <p>Авторизация</p>
+                          <form action="index.php" method="post">
+                              <fieldset id="inputs">
+                              <input id="username" type="text" name="login" placeholder="Эл. почта или логин" required>   
+                              <input id="password" type="password" name="password" placeholder="Пароль" required>
+                            </fieldset>
+                            <fieldset id="actions">
+                              <input type="submit" name="submit" id="submit" value="Войти">
+                              <input type="checkbox" class="checkbox" id="checkbox" />
+                              <label for="checkbox">Запомнить меня?</label>
+                            </fieldset>
+                          </form>
+                        </div>                     
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+         </div>
+      <div id="main">
+        <div class="content-wrapper">
+        <div class="slider-content">
+      <div class="owl-carousel">
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/main_size-1.jpg" alt="#">
+                  </div>
+              </div>
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider2.png" alt="#">
+                  </div>
+              </div>
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider3.png" alt="#">
+                  </div>
+              </div> 
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider2.png" alt="#">
+                  </div>
+              </div>
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider3.png" alt="#">
+                  </div>
+              </div> 
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider2.png" alt="#">
+                  </div>
+              </div>
+
+              <div class="items">
+                <div class="slide-item">
+                  <img src="images/slider3.png" alt="#">
+                  </div>
+              </div> 
+          </div>
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 0,
+        loop: true,
+        nav:true,
+        dots: true,
+        autoplay:true,
+        autoPlaySpeed: 4000,
+        autoplayTimeout:4000,
+        navText:[''],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+    </script>
+    </div>
+    </div>
+      <div class="content-wrapper">
+          <div class="order-wrapp">
+    <div class="title-info">
+          <h3>Ремонт оборудования</h3>
+          </div>
+    <div class="repair-content">
+      <div class="block-repair">
+        <a href="#" title="Прошиваем любые устройства быстро и не дорого!">
+        <div class="img">
+        <div class="block-color">
+          <div class="repair-title">Замена<br> прошивки</div>
+        </div>
+        </div>
+      </a>
+      </div>
+      <div class="block-repair2">
+        <a href="#" title="Ремонт телеофнов, планшетов быстро, качественно, недорого!">
+        <div class="img2">
+        <div class="block-color2">
+          <div class="repair-title">Ремонт планшетов</div>
+        </div>
+      </div>
+    </a>
+    </div>
+      <div class="block-repair3">
+        <a href="#" title="Ремонт ноутбуков, персональных компьютеров">
+        <div class="img3">
+        <div class="block-color3">
+          <div class="repair-title">Ремонт ноутбуков и ПК</div>
+        </div>
+        </div>
+      </a>
+      </div>
+      <div class="block-repair4">
+        <a href="#" title="Замена тачскринов, дисплеев на ваших устройствах">
+        <div class="img4">
+        <div class="block-color4">
+          <div class="repair-title">Замена тачскрина и дисплея</div>
+        </div>
+        </div>
+      </a>
+      </div>
+      <div class="block-repair5">
+        <a href="#" title="Восстановление, модернизация, диагностика ваших ПК">
+        <div class="img5">
+        <div class="block-color5">
+          <div class="repair-title">Восстановление и модернизация ПК</div>
+        </div>
+        </div>
+      </a>
+      </div>
+      <div class="block-repair6">
+        <a href="#" title="Низкие цены на заправку. Акция!">
+        <div class="img6">
+        <div class="block-color6">
+          <div class="repair-title">Заправка картриджей</div>
+        </div>
+        </div>
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="order-wrapp">
+        <div class="title-info">
+          <h3>Продажа комплектующих</h3>
+          </div>
+        <div class="order-content">
+          <div class="block-order q-block-order">
+            <span class="title-sticker">-50%</span>
+              <div class="order-image">
+                <img class="demo" src="images/mouse1.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Игровая мышь MONIX AVOR 7000</a>
+                </div>
+              <div class="wicartprice">1990 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/flash.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">USB 3.0 Drive VERBATIM 64GB</a>
+                </div>
+              <div class="wicartprice">490 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/keyboard.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Клавиатура Corsair GAMING K70</a>
+                </div>
+              <div class="wicartprice">3099 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/battarey.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Зарядное устройство для батареек Duracell</a>
+                </div>
+              <div class="wicartprice">2599 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+            <span class="title-sticker">-50%</span>
+              <div class="order-image">
+                <img class="demo" src="images/mouse1.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Игровая мышь MONIX AVOR 7000</a>
+                </div>
+              <div class="wicartprice">1990 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/flash.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">USB 3.0 Drive VERBATIM 64GB</a>
+                </div>
+              <div class="wicartprice">490 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/keyboard.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Клавиатура Corsair GAMING K70</a>
+                </div>
+              <div class="wicartprice">3099 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+          <div class="block-order q-block-order">
+              <div class="order-image">
+                <img class="demo" src="images/battarey.png" alt="#"/>
+                </div>
+                <div class="title-ord">
+                  <a href="#" class="q-block-order">Зарядное устройство для батареек Duracell</a>
+                </div>
+              <div class="wicartprice">2599 <span>Р.</span></div>
+              <div class="button-container">
+              <button class="button-order">Подробнее</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="advantage-section">
+      <div class="content-wrapper">
+        <div class="title-info">
+          <h3 style="color: #fff">Почему мы</h3>
+          </div>
+        <div class="ad-block ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-medkit" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            ТЩАТЕЛЬНАЯ ДИАГНОСТИКА
+          </div>
+          </div>
+        </div>
+        <div class="ad-block2 ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-cogs" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            100% ГАРАНТИЯ
+            <br>НА ЗАПЧАСТИ И УСЛУГИ
+          </div>
+          </div>
+        </div>
+        <div class="ad-block3 ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-id-card-o" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            ПОЛНЫЙ КОМПЛЕКТ
+            <br>ДОКУМЕНТОВ
+          </div>
+          </div>
+        </div>
+        <div class="ad-block4 ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            ВЫСОКОПРОФЕССИОНАЛЬНЫЙ
+            <br>КОЛЛЕКТИВ
+          </div>
+          </div>
+        </div>
+        <div class="ad-block5 ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-users" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            БЫСТРЫЙ И КАЧЕСТВЕННЫЙ РЕМОНТ
+          </div>
+          </div>
+        </div>
+        <div class="ad-block6 ad-space">
+          <div class="ad-wrap">
+            <div class="icon-ad">
+              <i class="fa fa-gift" aria-hidden="true"></i>
+            </div>
+            <div class="ad-text">
+            ПОСТОЯННЫЕ АКЦИИ И СКИДКИ
+          </div>
+          </div>
+        </div>
+        <div class="container-icon">
+        <a class="go_to" href="#block-schetchik"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </div>
+        <script>
+        $(document).ready(function(){
+    $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
+  var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
+        }
+      return false; // выключаем стандартное действие
+    });
+});
+        </script>
+      </div>
+      </div>
+      <div id="block-schetchik">
+        <div class="content-wrapper">
+        <div class="schet">
+          <div class="schet1">
+            <img src="images/icon_blue_mobile.png" alt="#">
+          <div class="title-schet">
+            <span class="spincrement">1045</span> <p>налаженных <br>компьютеров</p>
+          </div>
+          </div>
+          <div class="schet1">
+            <img src="images/print-icon.png" alt="#">
+            <div class="title-schet">
+          <span class="spincrement">505</span> <p>заправленных <br>картриджей</p>
+        </div>
+          </div>
+          <div class="schet1">
+            <img src="images/Web-Design-Development-Icon.png" alt="#">
+            <div class="title-schet">
+          <span class="spincrement">435 </span><p>заменнных <br>матриц</p>
+        </div>
+          </div>
+          <div class="schet1">
+            <img src="images/atomix_responsive.png" alt="#">
+            <div class="title-schet">
+          <span class="spincrement">925</span> <p>налаженных <br>телефонов</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <script>
+      $(document).ready(function(){
+    var show = true;
+    var countbox = "#advantage-section";
+    $(window).on("scroll load resize", function(){
+ 
+        if(!show) return false;                   // Отменяем показ анимации, если она уже была выполнена
+ 
+        var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
+ 
+        var w_height = $(window).height();        // Высота окна браузера
+        var d_height = $(document).height();      // Высота всего документа
+ 
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+ 
+        if(w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+            $(".spincrement").spincrement({
+                thousandSeparator: "",
+                duration: 3000
+            });
+ 
+            show = false;
+        }
+    });
+});
+      </script>
+      <div class="block-oplata">
+      <div class="slider-oplata">
+           <div class="content-wrapper">
+      <div class="owl-carousel">
+              <div class="slide">
+                        <img src="images/panasonic-logo.png" alt="Visa">
+              </div>
+
+              <div class="slide">
+                        <img src="images/logo-lenovo.png" alt="MasterCard">
+              </div>
+
+              <div class="slide">
+                        <img src="images/logo-lg.jpg" alt="PayPal">
+              </div> 
+              <div class="slide">
+                        <img src="images/logo-packard-bell.jpg" alt="Amex">
+              </div> 
+              <div class="slide">
+                        <img src="images/logo-fj.png" alt="Amazon">
+              </div> 
+              <div class="slide">
+                        <img src="images/logo-samsung.jpg" alt="WesterUnion">
+              </div> 
+              <div class="slide">
+                        <img src="images/logo-dell.jpg" alt="Delta">
+              </div> 
+              <div class="slide">
+                        <img src="images/logo-asus.jpg" alt="Shopify">
+              </div>
+              <div class="slide">
+                        <img src="images/logo-acer.jpg" alt="SkrillMoney">
+              </div>
+              <div class="slide">
+                        <img src="images/logo-apple.png" alt="SkrillMoney">
+              </div>
+              <div class="slide">
+                        <img src="images/logo-hp.jpg" alt="SkrillMoney">
+              </div>
+              <div class="slide">
+                        <img src="images/logo-msi.jpg" alt="SkrillMoney">
+              </div>
+              <div class="slide">
+                        <img src="images/logo-sony.png" alt="SkrillMoney">
+              </div>
+          </div>
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 0,
+        loop: true,
+        nav:true,
+        autoplay:true, //Автозапуск слайдера
+    autoplayTimeout:1500, //Время смены слайда
+    navText:['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        responsive: {
+          0: {
+            items: 4
+          },
+          600: {
+            items: 4
+          },
+          1000: {
+            items: 4
+          }
+        }
+      })
+    </script>
+    </div>
+      </div>
+    </div>
+    </div>
+      <div id="footer">
+        <div class="top-footer">
+          <div class="content-wrapper">
+            <div class="subscribe">Подпишитесь и получайте дополнительные новости</div>
+           <form action='..//cgi-bin/subscribe.cgi' target='_blank'>
+            <input type="text" name='email' value='' placeholder="Ваш email" class="sub-input">
+              <input type='submit' value='Подписаться' class="sub-button">
+              </form>
+              <script type="text/javascript">
+              $(document).ready(function(){
+
+              $(window).scroll(function(){
+              if ($(this).scrollTop() > 700) {
+              $('.vverh').fadeIn();
+              } else {
+              $('.vverh').fadeOut();
+              }
+              });
+
+              $('.vverh').click(function(){
+              $("html, body").animate({ scrollTop: 0 }, 800);
+              return false;
+              });
+
+              });
+              </script>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="footer-wrapper">
+            <div class="foot-service">
+        <div class="col">
+          <h3 class="title-footer">О компании</h3>
+               <ul>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                  <li><a href="#">Ремонт ноутбуков</a></li>
+                  <li><a href="#">Ремонт планшетов</a></li>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                </ul>
+              </div>
+              <div class="col">
+          <h3 class="title-footer">Помощь клиенту</h3>
+               <ul>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                  <li><a href="#">Ремонт ноутбуков</a></li>
+                  <li><a href="#">Ремонт планшетов</a></li>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                  <li><a href="#">Ремонт ноутбуков</a></li>
+                </ul>
+              </div>
+              <div class="col">
+          <h3 class="title-footer">Наши услуги</h3>
+               <ul>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                  <li><a href="#">Ремонт ноутбуков</a></li>
+                  <li><a href="#">Ремонт планшетов</a></li>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                  <li><a href="#">Ремонт ноутбуков</a></li>
+                  <li><a href="#">Ремонт планшетов</a></li>
+                  <li><a href="#">Ремонт компьютеров</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="foot-contact">
+              <h3 class="title-footer">СВЯЗАТЬСЯ С НАМИ</h3>
+              <p class="phone-mobile"><span class="phone-mobile-img"></span>+7 (495) 444 25 25</p>
+              <p class="phone-com"><span class="phone-com-img"></span>+7 937 555 55 55</p>
+             <span class="letter-img"></span><a href="mailto:alex-linuchev@mail.ru" class="letter">Написать нам</a>
+             <div class="social-block">
+               <h3 class="title-footer">Мы в соц сетях</h3>
+                  <a href="#" class="icon icon-mono facebook"></a>
+                  <a href="#" class="icon icon-mono twitter"></a>
+                <a href="#" class="icon icon-mono vk"></a>
+             </div>
+            </div>
+        </div>
+        <a href="#" class="vverh"></a>
+        </div>
+        <div class="footer-line">
+          <div class="content-wrapper">
+            <div class="copyright">© Альфа-Сервис, 2014—2017</div>
+            <div class="oplata"><i class="fa fa-cc-visa" aria-hidden="true"></i>
+            <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+          </div>
+          <div class="zakaz">
+            <a href="#" class="button-zak">Заказ деталей</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="signin_wrapper">
+      <div id="sign_form">
+        <span id="modal_close"></span>
+        <div class="signin__container">
+        <h3>Авторизация</h3>
+        <form action="index.php" method="post" class="signin_form">
+        <input type="text" name="login" placeholder="Ваш E-mail или логин">
+       <input type="text" name="password" placeholder="Ваш пароль">
+        <button class="signin_button">Войти</button>
+        </form>
+        <a href="#" class="reset-password">Забыли пароль?</a>
+        <div class="line"></div>
+        <span>или войдите с помощью</span>
+        <div class="signin-socials">
+        <a href="#"><img src="images/icon_fb.png" alt="#"></a>
+        <a href="#"><img src="images/icon_gp.png" alt="#"></a>
+        <a href="#"><img src="images/icon_mr.png" alt="#"></a>
+        <a href="#"><img src="images/icon_tw.png" alt="#"></a>
+        <a href="#"><img src="images/icon_vk.png" alt="#"></a>
+        <a href="#"><img src="images/icon_ya.png" alt="#"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+      <div id="overlay"></div>
+    </div>
+    <script>
+    $(document).ready(function() { 
+  $('a#signin').click( function(event){ 
+    event.preventDefault(); 
+    $('#overlay').fadeIn(400, 
+      function(){ 
+        $('#sign_form') 
+          .css('display', 'block') 
+          .animate({opacity: 1, top: '50%'}, 200); 
+    });
+  });
+  
+  $('#modal_close, #overlay').click( function(){ 
+    $('#sign_form')
+      .animate({opacity: 0, top: '45%'}, 200,  
+        function(){ 
+          $(this).css('display', 'none'); 
+          $('#overlay').fadeOut(400); 
+        }
+      );
+  });
+});
+</script>
+    <div class="content-wrapper">
+    <div id="modal_form">
+      <span id="modal_close"></span>
+      <div class="region-wrap">
+        <h3>Выберите ваш город</h3>
+        <div class="foot-line"></div>
+        <div class="region-list-wrapper">
+        <div class="big-city-list">
+          <span class="title-city">Крупные города</span>
+          <ul>
+            <li><a href="#" class="active">Москва</a></li>
+            <li><a href="#">Санкт-Петербург</a></li>
+            <li><a href="#">Екатеринбург</a></li>
+            <li><a href="#">Казань</a></li>
+            <li><a href="#">Новосибирск</a></li>
+            <li><a href="#">Нижний Новгород</a></li>
+            <li><a href="#">Самара</a></li>
+            <li><a href="#">Омск</a></li>
+            <li><a href="#">Уфа</a></li>
+            <li><a href="#">Челябинск</a></li>
+            <li><a href="#">Пермь</a></li>
+            <li><a href="#">Воронеж</a></li>
+            <li><a href="#">Волгоград</a></li>
+          </ul>
+        </div>
+        <div class="region-list">
+          <ul>
+            <li><a href="#">Владивосток</a></li>
+            <li><a href="#">Владимир</a></li>
+            <li><a href="#">Вологода</a></li>
+            <li><a href="#">Воронеж</a></li>
+            <li><a href="#">Грозный</a></li>
+            <li><a href="#">Екатеринбург</a></li>
+            <li><a href="#">Иваново</a></li>
+            <li><a href="#">Ижевск</a></li>
+            <li><a href="#">Иркутстк</a></li>
+            <li><a href="#">Казань</a></li>
+          </ul>
+        </div>
+        <div class="region-list">
+          <ul>
+            <li><a href="#">Киров</a></li>
+            <li><a href="#">Кострома</a></li>
+            <li><a href="#">Краснодар</a></li>
+            <li><a href="#">Курск</a></li>
+            <li><a href="#">Липецк</a></li>
+            <li><a href="#">Махачкала</a></li>
+            <li><a href="#">Мурманск</a></li>
+            <li><a href="#">Набережные Челны</a></li>
+            <li><a href="#">Новокузнецк</a></li>
+            <li><a href="#">Новороссийск</a></li>
+          </ul>
+        </div>
+        <div class="region-list">
+          <ul>
+            <li><a href="#">Новосибирск</a></li>
+            <li><a href="#">Омск</a></li>
+            <li><a href="#">Оренбург</a></li>
+            <li><a href="#">Орёл</a></li>
+            <li><a href="#">Пенза</a></li>
+            <li><a href="#">Пермь</a></li>
+            <li><a href="#">Псков</a></li>
+            <li><a href="#">Ростов-на-Дону</a></li>
+            <li><a href="#">Рязань</a></li>
+            <li><a href="#">Самара</a></li>
+          </ul>
+        </div>
+        <div class="region-list">
+          <ul>
+            <li><a href="#">Саратов</a></li>
+            <li><a href="#">Смоленск</a></li>
+            <li><a href="#">Сочи</a></li>
+            <li><a href="#">Сургут</a></li>
+            <li><a href="#">Тамбов</a></li>
+            <li><a href="#">Тверь</a></li>
+            <li><a href="#">Толятти</a></li>
+            <li><a href="#">Томск</a></li>
+            <li><a href="#">Тула</a></li>
+            <li><a href="#">Уфа</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="overlay"></div>
+    <script>
+    $(document).ready(function() { 
+  $('a#user-city').click( function(event){ 
+    event.preventDefault(); 
+    $('#overlay').fadeIn(400, 
+      function(){ 
+        $('#modal_form') 
+          .css('display', 'block') 
+          .animate({opacity: 1}, 200); 
+    });
+  });
+  
+  $('#modal_close, #overlay').click( function(){ 
+    $('#modal_form')
+      .animate({opacity: 0}, 200,  
+        function(){ 
+          $(this).css('display', 'none'); 
+          $('#overlay').fadeOut(400); 
+        }
+      );
+  });
+});
+</script>
+      <script type="text/javascript" src="js/wicart.js"></script> 
+      <script src="js/jquery.spincrement.js"></script>
+   </body>
+</html>
